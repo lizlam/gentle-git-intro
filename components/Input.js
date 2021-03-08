@@ -1,14 +1,25 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+const InputContainer = styled.div`
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+`;
+
+const CheckDiv = styled.div`
+  margin-top: 13px;
+  margin-left: 10px;
+`;
+
 const StyledInput = styled.input`
   padding: 10px;
   background: none;
   border-radius: 10px;
   border: 2px dashed gray;
   width: 400px;
+  height: 30px;
   color: wheat;
-  font-size:16px;
+  font-size: 16px;
 `;
 
 const Button = styled.button`
@@ -18,24 +29,33 @@ const Button = styled.button`
   padding: 10px;
 `;
 
-function Input() {
-  const [complete, setComplete] = useState(false);  
+function Input({ answer }) {
+  const [complete, setComplete] = useState(false)
+  const [input, setInput] = useState("")  
   
   const handleClick = () => {
-    setComplete(true);
+    if (answer === input) {
+      setComplete(true)
+    } else {
+      setComplete(false)
+    }
   }
 
   const handleChange = (e) => {
     console.log(e);
+    setInput(e.target.value);
   }
 
   return (
-    <>
+    <InputContainer>
+    <div>
       {complete && (
-        <div>DONE!</div>
+        <CheckDiv>✓</CheckDiv>
       )}
-      <StyledInput onChange={handleChange} /><Button onClick={handleClick}>Enter</Button>
-    </>
+      </div>
+      <StyledInput onChange={handleChange} />
+      <Button onClick={handleClick}>Enter</Button>
+    </InputContainer>
   )
 }
 

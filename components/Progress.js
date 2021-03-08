@@ -6,6 +6,7 @@ const StyledDiv = styled.div`
   width: 120px;
   border-radius: 15px;
   padding: 20px;
+  margin-top: 10px;
   margin-left: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
