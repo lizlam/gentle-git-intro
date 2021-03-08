@@ -4,6 +4,11 @@ import Progress from '../components/Progress'
 import Main from '../components/Main'
 import styled from 'styled-components'
 
+const StyledDiv = styled.div`
+  margin-top: 50px;
+  margin-bottom: 20px;
+`;
+
 const Container = styled.div`
   display: grid;
   grid-template-columns: 700px 1fr;
@@ -35,8 +40,12 @@ function Home () {
       <Head>
         <title>a gentle intro</title>
       </Head>
-      <div>a gentle introduction to git</div>
-      <progress value='.2' max='1.0'></progress>
+      <StyledDiv>
+        a gentle introduction to git
+        <div>
+          <progress value='.37' max='1.0'></progress>
+        </div>
+      </StyledDiv>
       <Container>
         <Main step={currentStep}></Main>
         <Progress step={currentStep}/>
