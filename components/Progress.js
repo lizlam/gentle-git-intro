@@ -2,14 +2,24 @@ import styled from 'styled-components'
 
 const StyledDiv = styled.div`
   border: 2px dashed wheat;
-  height: 500px;
-  width: 100px;
+  height: 400px;
+  width: 120px;
   border-radius: 15px;
   padding: 20px;
-  margin-left: 80px
+  margin-left: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
-const radius = '1.4'
+const LabelDiv = styled.div`
+  font-size: 12px;
+`;
+
+const TextDiv = styled.div`
+  padding-bottom: 21px;
+`;
+
+const radius = '3'
 const fillDone = 'red'
 
 //<text x='3' y='3' stroke='white' strokeWidth='1px' fontSize="8px" dy=".5em">intro</text>
@@ -29,21 +39,36 @@ function Progress ( {step} ) {
 
   return (
     <StyledDiv>
-      <svg viewBox="0 0 30 500" strokeWidth=".5" stroke='wheat'>
-        <line x1='2' x2='2' y1='2' y2='100'>
-        </line>
-        <circle cx='2' r={radius} cy='2' fill={fill1} />
-        <circle cx='2' r={radius} cy='10' fill={fill2} />
-        <circle cx='2' r={radius} cy='20' fill={fill3} />
-        <circle cx='2' r={radius} cy='30' fill={fill4} />
-        <circle cx='2' r={radius} cy='40' fill={fill5} />
-        <circle cx='2' r={radius} cy='50' fill={fill6} />
-        <circle cx='2' r={radius} cy='60' fill={fill7} />
-        <circle cx='2' r={radius} cy='70' fill={fill8} />
-        <circle cx='2' r={radius} cy='80' fill={fill9} />
-        <circle cx='2' r={radius} cy='90' fill={fill10} />
-        <circle cx='2' r={radius} cy='100' fill={fill11} />
+      <div>
+        <svg viewBox="0 0 30 500" strokeWidth=".5" stroke='wheat'>
+          <line x1='3' x2='3' y1='3' y2='200'>
+          </line>
+          <circle cx='3' r={radius} cy='3' fill={fill1} />
+          <circle cx='3' r={radius} cy='23' fill={fill2} />
+          <circle cx='3' r={radius} cy='43' fill={fill3} />
+          <circle cx='3' r={radius} cy='63' fill={fill4} />
+          <circle cx='3' r={radius} cy='83' fill={fill5} />
+          <circle cx='3' r={radius} cy='103' fill={fill6} />
+          <circle cx='3' r={radius} cy='123' fill={fill7} />
+          <circle cx='3' r={radius} cy='143' fill={fill8} />
+          <circle cx='3' r={radius} cy='163' fill={fill9} />
+          <circle cx='3' r={radius} cy='183' fill={fill10} />
+          <circle cx='3' r={radius} cy='203' fill={fill11} />
         </svg>
+      </div>
+      <LabelDiv>
+        <TextDiv>Introduction</TextDiv>
+        <TextDiv>New Repo</TextDiv>
+        <TextDiv>Add a File</TextDiv>
+        <TextDiv>Commit</TextDiv>
+        <TextDiv>New Branch</TextDiv>
+        <TextDiv>Edit Branch</TextDiv>
+        <TextDiv>History</TextDiv>
+        <TextDiv>Time to Merge</TextDiv>
+        <TextDiv>Cloning</TextDiv>
+        <TextDiv>Pulling</TextDiv>
+        <TextDiv>Complete</TextDiv>
+      </LabelDiv>
     </StyledDiv>
   )
 }
