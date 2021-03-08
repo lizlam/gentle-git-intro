@@ -1,21 +1,63 @@
 import styled from 'styled-components'
+import Intro from './Intro.mdx'
+import CreateNewRepo from './CreateNewRepo.mdx'
+import AddFile from './AddFile.mdx'
+import TimeToCommit from './TimeToCommit.mdx'
+import CreateNewBranch from './CreateNewBranch.mdx'
+import EditBranch from './EditBranch.mdx'
+import LookAtHistory from './LookAtHistory.mdx'
+import TimeToMerge from './TimeToMerge.mdx'
+import Cloning from './Cloning.mdx'
+import Pulling from './Pulling.mdx'
+import Complete from './Complete.mdx'
 
 const StyledDiv = styled.div`
   border: 2px dashed red;
-  height: 500px;
+  height: 700px;
   width: 700px;
   border-radius: 15px;
   padding: 20px;
   margin: 10px;
+  overflow: auto;
 `;
 
-const radius = '.5'
-const fill = 'red'
-
-function Main () {
+function Main ({ step }) {
   return (
     <StyledDiv>
-      
+      {step === 0 && (
+        <Intro />
+      )}
+      {step === 1 && (
+        <CreateNewRepo />
+      )}
+      {step === 2 && (
+        <AddFile />
+      )}
+      {step === 3 && (
+        <TimeToCommit />
+      )}
+      {step === 4 && (
+        <CreateNewBranch />
+      )}
+      {step === 5 && (
+        <EditBranch />
+      )}
+      {step === 6 && (
+        <LookAtHistory />
+      )}
+      {step === 7 && (
+        <TimeToMerge />
+      )}
+      {step === 8 && (
+        <Cloning />
+      )}
+      {step === 9 && (
+        <Pulling />
+      )}
+      {step === 10 && (
+        <Complete />
+      )}
+        
     </StyledDiv>
   )
 }

@@ -1,0 +1,43 @@
+## What about pulling?
+
+To keep our repo updated, we need to pull from the original/remote.
+
+Go to the *first* terminal window with the original project open and make a change and commit it.  
+```
+   $ echo 'I love coffee!' >> hello.txt
+   $ git add .
+   $ git commit -m "Add line about my love of caffeine."
+```
+
+Go back to the *second* terminal window with project2 open and check its status:
+```
+    $ git status
+    On branch master
+    Your branch is up to date with 'origin/master'.
+
+    nothing to commit, working tree clean
+```
+That's interesting.  Didn't we just make a change in the original project?!? Our cloned project (project2) does not know it is out of date with the original.
+That is because we need to *fetch* the changes (note: fetching is different from pulling).
+```
+    $ git fetch origin master
+    $ git status
+      On branch master
+      Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+        (use "git pull" to update your local branch)
+
+      nothing to commit, working tree clean
+
+```    
+Great! Now our repo is updated...but our working directory is not.
+This is because fetching only updates our local repo, while pulling will fetch and merge it into our local workspace.
+As the git output suggest, let's pull!
+```
+    $ git pull
+    $ git log --oneline
+      fb58b27 (HEAD -> master, origin/master, origin/HEAD) Add line about my love of caffeine.
+      187c6fa (origin/dev_llam) Saying who I am
+      deccda5 Commit first file to the repo.
+```
+
+Yay! We’re done! We have successfully pulled the coffee change from a remote repo.

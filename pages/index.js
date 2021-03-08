@@ -9,15 +9,25 @@ const Container = styled.div`
   grid-template-columns: 700px 1fr;
 `;
 
+const Button = styled.button`
+  width: 50px;
+  border: 1px solid wheat;
+  color: wheat;
+  border-radius: 5px;
+  background: none;
+`;
+
 function Home () {
+  const max = 10;
+  const min = 0;
   const [currentStep, setCurrentStep] = useState(0)
 
   const handleClickNext = () => {
-    setCurrentStep(currentStep + 1)
+    currentStep < max && setCurrentStep(currentStep + 1)
   }
 
   const handleClickBack = () => {
-    setCurrentStep(currentStep - 1)
+    currentStep > min && setCurrentStep(currentStep - 1)
   }
 
   return (
@@ -28,11 +38,10 @@ function Home () {
       <div>a gentle introduction to git</div>
       <progress value='.2' max='1.0'></progress>
       <Container>
-        <Main></Main>
+        <Main step={currentStep}></Main>
         <Progress step={currentStep}/>
-        <button onClick={handleClickNext}>Next</button>
-        <button onClick={handleClickBack}>Back</button>
-        {currentStep}
+        <Button onClick={handleClickBack}>Back</Button>
+        <Button onClick={handleClickNext}>Next</Button>
       </Container>
     </>
   )
