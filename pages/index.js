@@ -14,12 +14,19 @@ const Container = styled.div`
   grid-template-columns: 700px 1fr;
 `;
 
+const ButtonDiv = styled.div`
+  margin-left: 75px;
+`;
+
 const Button = styled.button`
   width: 50px;
   border: 1px solid wheat;
   color: wheat;
   border-radius: 5px;
   background: none;
+  margin: 16px;
+  padding-left: 10x;
+  padding-right: 10px;
 `;
 
 function Home () {
@@ -48,9 +55,13 @@ function Home () {
       </StyledDiv>
       <Container>
         <Main step={currentStep}></Main>
-        <Progress step={currentStep}/>
-        <Button onClick={handleClickBack}>Back</Button>
-        <Button onClick={handleClickNext}>Next</Button>
+        <div>
+          <Progress step={currentStep}/>
+            <ButtonDiv>
+              <Button onClick={handleClickBack}>Back</Button>
+              <Button onClick={handleClickNext}>Next</Button>
+            </ButtonDiv>
+        </div>
       </Container>
     </>
   )

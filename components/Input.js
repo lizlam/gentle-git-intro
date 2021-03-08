@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const InputContainer = styled.div`
   display: grid;
   grid-template-columns: 50px 1fr 1fr;
+  grid-gap: 25px;
 `;
 
 const CheckDiv = styled.div`
@@ -25,8 +26,9 @@ const StyledInput = styled.input`
 const Button = styled.button`
   color: wheat;
   background: none;
-  margin: 20px;
-  padding: 10px;
+  padding: 4px;
+  border-radius: 10px;
+  font-size: 16px;
 `;
 
 function Input({ answer }) {
