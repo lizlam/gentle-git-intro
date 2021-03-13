@@ -1,0 +1,22 @@
+## Let's take a look at our history so far.
+
+Type in the terminal:
+```
+    $ git log --oneline
+      187c6fa (HEAD -> dev_llam) Saying who I am
+      deccda5 (master) Commit first file to the repo.
+```
+We now have two commits in our history in our dev branch.
+
+NOTE: The seemingly random characters in front of our commit message is called a commit SHA. This commit SHA includes information about the author and date and will be unique to you. If you are following along on your terminal, don't worry if the output looks a little different.
+
+Let’s check on master:
+```
+    $ git checkout master
+    $ git log --oneline
+      deccda5 (HEAD -> master) Commit first file to the repo.
+    $ cat hello.txt
+      hello world
+```
+
+<Input question="Show your repo's history, formtted in 1 line." answer="git log --online" />

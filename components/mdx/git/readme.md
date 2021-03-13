@@ -1,0 +1,11 @@
+0. Intro
+1. CreateNewRepo
+2. AddFile
+3. TimeToCommit
+4. CreateNewBranch
+5. EditBranch
+6. LookAtHistory
+7. TimeToMerge
+8. Cloning
+9. Pulling
+10. Complete
