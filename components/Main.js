@@ -14,11 +14,16 @@ import Complete from './mdx/git/Complete.mdx'
 const StyledDiv = styled.div`
   border: 2px dashed red;
   height: 700px;
-  width: 700px;
+  width: 800px;
   border-radius: 15px;
   padding: 20px;
   margin: 10px;
   overflow: auto;
+
+  code {
+    font-size: 16px;
+    color: lightgreen;
+  }
 `;
 
 function Main ({ step }) {

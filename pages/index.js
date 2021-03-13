@@ -11,7 +11,7 @@ const StyledDiv = styled.div`
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 700px 1fr;
+  grid-template-columns: 800px 1fr;
 `;
 
 const ButtonDiv = styled.div`
