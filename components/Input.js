@@ -5,7 +5,7 @@ const InputContainer = styled.div`
   display: grid;
   grid-template-columns: 50px 1fr 1fr;
   grid-gap: 25px;
-  border-top: 2px dashed red;
+  border-top: 2px dashed wheat;
   margin-top: 25px;
   padding-top: 50px;
   padding-bottom: 50px;
