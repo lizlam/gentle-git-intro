@@ -24,6 +24,19 @@ const StyledDiv = styled.div`
     font-size: 16px;
     color: lightgreen;
   }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: gray;
+    border-radius: 15px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+    border: 2px solid darkgray;
+  }
 `;
 
 function Main ({ step }) {
